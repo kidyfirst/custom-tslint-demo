@@ -1,0 +1,9 @@
+.idea/
+.git/
+.git
+
+# Folders to ignore
+node_modules/
+build/
+npm-debug.log
+yarn-error.log

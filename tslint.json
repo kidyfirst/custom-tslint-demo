@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "tslint-eslint-rules"
+  ],
+  "rulesDirectory": "./lib/rules",
+  "rules": {
+    "tsx-no-render-non-intel-context": true,
+    "only-arrow-functions": false,
+    "arrow-return-shorthand": false,
+    "variable-name": false,
+    "no-bitwise": false,
+    "jsx-no-lambda": false,
+    "member-ordering": false,
+    "interface-name": [
+      true,
+      "always-prefix"
+    ],
+    "no-empty-interface": false,
+    "ordered-imports": false,
+    "interface-over-type-literal": true,
+    "object-literal-sort-keys": false,
+    "no-console": [
+      false
+    ],
+    "member-access": false,
+    "no-debugger": false
+  }
+}
