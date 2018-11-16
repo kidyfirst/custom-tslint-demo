@@ -40,6 +40,19 @@ const cases = [
                 }`,
     success: false
   },
+
+  {
+    source: `export default class YourComponentName extends React.Component<{}, {}> {
+                    render() {
+                        return (
+                            <div>
+                                <input placeholder = {formatMessage(messages.password)} />
+                            </div>
+                        );
+                    }
+                }`,
+    success: true
+  },
   {
     source: `export default class YourComponentName extends React.Component<{}, {}> {
                     render() {

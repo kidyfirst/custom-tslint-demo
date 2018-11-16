@@ -46,9 +46,10 @@ class NoRenderNonIntelContextRuleWalker extends Lint.RuleWalker {
   }
 
   private checkAttributeIncludeNonInterlContext(attributes: ts.JsxAttributes) {
-    attributes.properties.forEach((property) => {
+    attributes.properties.forEach(property => {
       if (property.name && property.name.getText().toLowerCase() === "placeholder") { // placeholder 属性为一变量或常量
-        if (property.name.kind === ts.SyntaxKind.Identifier) {
+        // @ts-ignore
+        if (property.initializer.kind === ts.SyntaxKind.StringLiteral) {
           this.addFailureAtNode(
             property,
             Rule.FAILURE_STRING

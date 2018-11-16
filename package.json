@@ -7,7 +7,7 @@
     "license": "MIT",
     "scripts": {
         "build": "rimraf ./lib && tsc",
-        "test": "ts-mocha test/**/*.spec.ts",
+        "test": "ts-mocha $NODE_DEBUG_OPTION test/**/*.spec.ts",
         "lint": "tslint -c tslint.json src/*.tsx",
         "verify": "npm-run-all build lint test"
     },
